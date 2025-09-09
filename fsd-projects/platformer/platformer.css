@@ -3,15 +3,11 @@ body {
 }
 
 canvas {
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(255, 0, 0); 
   margin: 20px;
 }
 
 img {
   display: none;
 }
-createPlatform(500, 0, 20, 290, "red")
-createPlatform(1350, 400, 50, 50, "orange")
-createPlatform(100, 20, 10, 10, "yellow")
-createPlatform(1800, 800, 30, 10, "green")
-createPlatform(2300, 900, 100, 30, "blue")
+   
