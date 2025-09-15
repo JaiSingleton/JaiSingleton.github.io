@@ -32,16 +32,16 @@ $(function () {
     toggleGrid();
 
     // TODO 2 - Create Platforms
-    createPlatform(500, 0, 20, 290, "red"); // bright crimson for a finished platform
-    createPlatform(1350, 400, 50, 250, "orange"); // bright amber for a finished platform
-    createPlatform(1600, 20, 10, 220, "yellow"); // dark saffron for a finished platform
-    createPlatform(500, 350, 40, 20, "green"); // bright emerald for a finished platform
-    createPlatform(740, 500, 100, 30, "blue"); // dark sapphire for finished platform
+    // createPlatform(500, 300, 200, 20, "brightred"); bright red for a finished platforms
+    createPlatform(350, 400, 50, 250, "brightorange");
+    createPlatform(600, 20, 10, 220, "brightyellow");
+    createPlatform(500, 350, 40, 20, "darkgreen");
+    createPlatform(740, 500, 100, 30, "darkblue");
 
     // TODO 3 - Create Collectables
     createCollectable("steve", 1350, 50);
     createCollectable("diamond", 200, 170, 0.5, 0.7);
-    createCollectable("star", 1300, 150, 1.0, 0, 9);
+    createCollectable("star", 300, 150, 1.0, 0, 9);
 
     // TODO 4 - Create Cannons
     createCannon("top", 500, 300);
