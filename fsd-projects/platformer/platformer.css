@@ -3,7 +3,7 @@ body {
 }
 
 canvas {
-  background-color: hwb(116 0% 0%);
+  background-color: lch(53.23% 104.58 40);
   margin: 20px;
 }
 

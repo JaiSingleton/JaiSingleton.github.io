@@ -1,5 +1,3 @@
-const { createElement } = require("react");
-
 $(function () {
   // initialize canvas and context when able to
   canvas = document.getElementById("canvas");
@@ -32,21 +30,20 @@ $(function () {
     toggleGrid();
 
     // TODO 2 - Create Platforms
-    // createPlatform(500, 300, 200, 20, "brightred"); bright red for a finished platforms
-    createPlatform(350, 400, 50, 250, "brightorange");
-    createPlatform(600, 20, 10, 220, "brightyellow");
-    createPlatform(500, 350, 40, 20, "darkgreen");
-    createPlatform(740, 500, 100, 30, "darkblue");
-
+    createPlatform(500, 300, 200, 20, "red"); // dark red for a finished platform
+    createPlatform(450, 500, 150, , "orange"); // bright orange for a finished platform
+    createPlatform(600, 20, 10, 320, "yellow"); // bright yellow for a finsihed platform
+    createPlatform(500, 350, 40, 20, "green", ); // dark green for a finished platform
+    createPlatform(740, 500, 100, 30, "blue"); // dark blue for finished platform
+    createPlatform(400, 610, 101, 40, "purple") // dark purple for finished platform
     // TODO 3 - Create Collectables
-    createCollectable("steve", 1350, 50);
-    createCollectable("diamond", 200, 170, 0.5, 0.7);
-    createCollectable("star", 300, 150, 1.0, 0, 9);
-
+    createCollectable("steve", 800, 700);
+    createCollectable("diamond", 200, 170);
+    createCollectable("max", 390, 400);
+    createCollectable("grace", 440, 590);
     // TODO 4 - Create Cannons
-    createCannon("top", 500, 300);
-    createCannon("right", 750, 1400);
-    createCannon("left", 0, 360);
+  createCannon("top", 200, 100);
+  createCannon("right", 300, 2000);
     //////////////////////////////////
     // ONLY CHANGE ABOVE THIS POINT //
     //////////////////////////////////
