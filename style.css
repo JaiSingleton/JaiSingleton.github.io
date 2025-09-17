@@ -67,7 +67,7 @@ main {
 
 /* interests section styles */
 #interests {
-    border: 4px rgb(255, 0, 0) ridge;
+    border: 4px lch(28.11% 63.88 38.3) ridge;
     padding: 8px;
     margin-top: 20px;
 }
