@@ -710,4 +710,4 @@ We've compiled a list of optional **bonus challenges** for you to take this proj
 <hr>
 <br>
 
-### 🎉🎉🎉 Your bouncing box game is live on your site and you can share it with others!  🎉🎉🎉
+### 🎉🎉🎉 Your bouncing box game is live on your site and you can share it with others! 🎉🎉🎉
