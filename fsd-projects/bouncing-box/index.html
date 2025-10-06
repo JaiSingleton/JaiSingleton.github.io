@@ -8,7 +8,7 @@
       .box {
         width: 70px;
         height: 70px;
-        background-color: rgb(198, 216, 0);
+        background-color: rgb(216, 0, 0);
         font-size: 300%;
         text-align: center;
         user-select: none;
@@ -55,9 +55,9 @@
         box.on("click", handleBoxClick);
 
         // moves the Box to a new position on the screen along the X-Axis
-        function moveBoxTo(newPositionX, newPositionY) {
-          box.css("left", newPositionX);
-          box.css("top", newPositionY);
+        function moveBoxTo(positionX, positionY) {
+          box.css("left", positionX);
+          box.css("top", positionY);
         }
         moveBoxTo(positionX); // Moves box to right edge
         // changes the text displayed on the Box
@@ -73,12 +73,13 @@
         var positionX = 5;
         var positionY = 5;
         var speedX = 10;
-        var speedY = 10;
+        var speedY = 5; // Add speedY for vertical movement
         var points = 0;
-        var boxWidth = box.width(); // get the box's full width
-        var boardWidth = board.width(); // get the board's full width
-        var boxHeight = box.height(); // get the box's full height
-        var boardHeight = board.height(); // get the board's full height
+        var screenWidth = window.innerWidth;
+        var screenHeight = window.innerHeight;
+
+        // Get the box element from the HTML
+        const box = document.getElementById("box");
 
         /**
          * This Function will be called 20 times/second.
@@ -86,7 +87,9 @@
          * If the box drifts off the screen, turn it around!
          */
         function update() {
-        var positionX = positionX + 10; // Adds 10 to positionX
+          // Move the box
+          positionX += speedX;
+          positionY += speedY;
         }
 
         /**
@@ -96,12 +99,7 @@
          * - increase the speed
          * - move the box to the left side of the screen.
          */
-        function handleBoxClick() {
-          points++; // increase the points
-          speedX += 3; // increase the speed
-          positionX = 0; // move to left side of screen
-          changeBoxText(points); // update the box text
-        }
+        function handleBoxClick() {}
       })();
     </script>
   </body>
