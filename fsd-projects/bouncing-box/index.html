@@ -57,7 +57,9 @@
         // moves the Box to a new position on the screen along the X-Axis
         function moveBoxTo(positionX, positionY) {
           box.css("left", positionX);
-          box.css("top", positionY);
+          box.css("right", positionY);
+          box.css("left", newPositionX);
+          box.css("top", newPositionY);
         }
         moveBoxTo(positionX); // Moves box to right edge
         // changes the text displayed on the Box
@@ -70,27 +72,29 @@
         //////////////////////////////////////////////////////////////////
 
         // TODO 2 - Variable declarations
-        var positionX = 5;
-        var positionY = 5;
-        var speedX = 10;
-        var speedY = 5; // Add speedY for vertical movement
-        var points = 0;
-        var screenWidth = window.innerWidth;
-        var screenHeight = window.innerHeight;
-
-        // Get the box element from the HTML
-        const box = document.getElementById("box");
-
+        var positionX = 0;
+        var positionY = 0
+        var points = 0
+        var speed = 10
+        var boardHeight = jQuery(window).height();
         /**
          * This Function will be called 20 times/second.
          * Each time it is called, it should move the Box to a new location.
          * If the box drifts off the screen, turn it around!
          */
         function update() {
-          // Move the box
-          positionX += speedX;
-          positionY += speedY;
+          moveBoxTo(positionX, positionY);
+          positionX = positionX + speed
+          if (positionX > boardWidth) {
+          speed = speed * -1
+          }
+          if (positionX < 0) {
+            positionX = 0;
+            speed = speed * -1
+            speed = 10 * points + 0
+          }
         }
+
 
         /**
          * This Function will be called each time the box is clicked.
@@ -99,7 +103,12 @@
          * - increase the speed
          * - move the box to the left side of the screen.
          */
-        function handleBoxClick() {}
+        function handleBoxClick() {
+          positionX = 0;
+          changeBoxText(points);
+          points = points + 1
+          speed = speed + 3
+        }
       })();
     </script>
   </body>
