@@ -33,15 +33,15 @@ var init = function (window) {
 
 
         // TODO 3 : Call the drawCircle() function
-    drawCircle()
-    drawCircle()
-    drawCircle()
-    drawCircle()
-    drawCircle()
+    //drawCircle()
+    //drawCircle()
+    //drawCircle()
+    //drawCircle()
+    //drawCircle()
 
         // TODO 7 : Use a loop to create multiple circles
         for (var i = 0; i < 100; i++) {
-        game.drawCircle(circles[i]); 
+        drawCircle(); 
 }
 
 
@@ -86,32 +86,21 @@ var init = function (window) {
             }
             
             // TODO 6 : YOUR CODE STARTS HERE //////////////////////
-        // Right Boundary (example provided in instructions):
-  if (circle.x > CANVAS_WIDTH) {
-    circle.x = 0;
-  }
+        // Left Boundary:
+        if (circle.x < 0) {
+            circle.x = canvas.width;
+        }
 
-  // Left Boundary:
-  // When the x position moves off the left side (circle.x < 0),
-  // set circle.x to the right edge (CANVAS_WIDTH).
-  if (circle.x < 0) {
-    circle.x = CANVAS_WIDTH;
-  }
+        // Top Boundary:
+        if (circle.y < 0) {
+            circle.y = canvas.height;
+        }
 
-  // Top Boundary:
-  // When the y position moves off the top edge (circle.y < 0),
-  // set circle.y to the bottom edge (CANVAS_HEIGHT).
-  if (circle.y < 0) {
-    circle.y = CANVAS_HEIGHT;
-  }
-
-  // Bottom Boundary:
-  // When the y position moves off the bottom edge (circle.y > CANVAS_HEIGHT),
-  // set circle.y to the top edge (0).
-  if (circle.y > CANVAS_HEIGHT) {
-    circle.y = 0;
-  }
-
+        // Bottom Boundary:
+        if (circle.y > canvas.height) {
+            circle.y = 0;
+        }
+  
 
             // YOUR TODO 6 CODE ENDS HERE //////////////////////////
         }
