@@ -18,14 +18,66 @@ var runLevels = function (window) {
 
     // TODOs 5 through 11 go here
     // BEGIN EDITING YOUR CODE HERE
+    var hitZoneSize = 25;
+    var damageFromObstacle = 10;
+    var sawBladeHitZone = game.createObstacle(hitZoneSize, damageFromObstacle);
 
-    
+    sawBladeHitZone.x = 400;
+    sawBladeHitZone.y = 100;
+    game.addGameItem(sawBladeHitZone);
 
-    function startLevel() {
-      // TODO 13 goes below here
+    var obstacleImage = draw.bitmap("img/sawblade.png");
+    sawBladeHitZone.addChild(obstacleImage);
 
+    function createSawBlade(x, y) {
+      //createSawBlade
+      //createSawBlade
+      //createSawBlade
+    }
 
+    var enemy = game.createGameItem("enemy", 25);
+    var redSquare = draw.rect(50, 50, "red");
 
+    redSquare.x = -25;
+    redSquare.y = -25;
+    enemy.addChild(redSquare);
+    enemy.x = 400;
+    enemy.y = groundY - 50;
+    game.addGameItem(enemy);
+
+    enemy.onPlayerCollision = function () {
+      game.increaseScore(100);
+      enemy.fadeOut();
+      //startLevel()
+    };
+
+    enemy.onProjectileCollision = function () {
+      game.increaseScore(100);
+      enemy.shrink();
+      //startLevel()
+    };
+
+    function createEnemy(x, y) {
+      function createMarker() {}
+      //startLevel
+    }
+
+    createEnemy(400, groundY - 10);
+    createEnemy(800, groundY - 100);
+    createEnemy(1200, groundY - 50);
+
+   function createReward() {}
+
+    function startLevel() {}
+  // TODO 13 goes below here
+    var firstGameItemObject = gameObjects[0];
+    var firstX = firstGameItemObject.x;
+    var firstY = firstGameItemObject.y;
+    var firstType = firstGameItemObject.type;
+    createSawBlade(firstX, firstY);
+    for (var i = 0; i < myArray.length; i++) {
+    var eachElement = myArray[i];
+    }
       //////////////////////////////////////////////
       // DO NOT EDIT CODE BELOW HERE
       //////////////////////////////////////////////
@@ -37,7 +89,7 @@ var runLevels = function (window) {
     }
     startLevel();
   };
-};
+
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if (
