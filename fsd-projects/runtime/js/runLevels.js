@@ -57,8 +57,6 @@ var runLevels = function (window) {
       //startLevel()
     };
 
-    
-
     function createEnemy(x, y) {
       function createMarker() {}
       //startLevel
@@ -68,30 +66,29 @@ var runLevels = function (window) {
     createEnemy(800, groundY - 100);
     createEnemy(1200, groundY - 50);
 
-   function createReward() {}
+    function createReward(trophy) {}
 
     function startLevel() {}
-  // TODO 13 goes below here
+    // TODO 13 goes below here
     var firstGameItemObject = gameObjects[0];
     var firstX = firstGameItemObject.x;
     var firstY = firstGameItemObject.y;
     var firstType = firstGameItemObject.type;
     createSawBlade(firstX, firstY);
     for (var i = 0; i < myArray.length; i++) {
-    var eachElement = myArray[i];
+      var eachElement = myArray[i];
     }
-      //////////////////////////////////////////////
-      // DO NOT EDIT CODE BELOW HERE
-      //////////////////////////////////////////////
-      if (++currentLevel === levelData.length) {
-        startLevel = () => {
-          console.log("Congratulations!");
-        };
-      }
+    //////////////////////////////////////////////
+    // DO NOT EDIT CODE BELOW HERE
+    //////////////////////////////////////////////
+    if (++currentLevel === levelData.length) {
+      startLevel = () => {
+        console.log("Congratulations!");
+      };
     }
-    startLevel();
   };
-
+  startLevel();
+};
 
 // DON'T REMOVE THIS CODE //////////////////////////////////////////////////////
 if (
